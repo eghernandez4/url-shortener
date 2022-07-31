@@ -856,3 +856,343 @@ puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
 puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
 puma (5.6.4) lib/puma/server.rb:441:in `process_client'
 puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/3yEZwQ" for 127.0.0.1 at 2022-07-30 18:44:48 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (98.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RedirectController#redirect as HTML
+  Parameters: {"short_code"=>"3yEZwQ"}
+  [1m[36mUrlManager Load (179.0ms)[0m  [1m[34mSELECT "url_managers".* FROM "url_managers" WHERE "url_managers"."short_code" = $1 LIMIT $2[0m  [["short_code", "3yEZwQ"], ["LIMIT", 1]]
+  ↳ app/controllers/redirect_controller.rb:6:in `redirect'
+  [1m[36mTRANSACTION (152.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+  [1m[36mUrlManager Exists? (73.5ms)[0m  [1m[34mSELECT 1 AS one FROM "url_managers" WHERE "url_managers"."short_code" = $1 AND "url_managers"."id" != $2 LIMIT $3[0m  [["short_code", "3yEZwQ"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+  [1m[36mUrlManager Update (73.1ms)[0m  [1m[33mUPDATE "url_managers" SET "counter" = $1, "updated_at" = $2 WHERE "url_managers"."id" = $3[0m  [["counter", 7], ["updated_at", "2022-07-30 23:44:52.357632"], ["id", 1]]
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+  [1m[36mTRANSACTION (83.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+Completed 302 Found in 1076ms (Views: 0.4ms | ActiveRecord: 938.2ms | Allocations: 24219)
+
+
+Started GET "/3yEZwQ" for ::1 at 2022-07-30 18:45:26 -0500
+Processing by RedirectController#redirect as */*
+  Parameters: {"short_code"=>"3yEZwQ"}
+  [1m[36mUrlManager Load (72.4ms)[0m  [1m[34mSELECT "url_managers".* FROM "url_managers" WHERE "url_managers"."short_code" = $1 LIMIT $2[0m  [["short_code", "3yEZwQ"], ["LIMIT", 1]]
+  ↳ app/controllers/redirect_controller.rb:6:in `redirect'
+  [1m[36mTRANSACTION (72.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+  [1m[36mUrlManager Exists? (73.5ms)[0m  [1m[34mSELECT 1 AS one FROM "url_managers" WHERE "url_managers"."short_code" = $1 AND "url_managers"."id" != $2 LIMIT $3[0m  [["short_code", "3yEZwQ"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+  [1m[36mUrlManager Update (72.5ms)[0m  [1m[33mUPDATE "url_managers" SET "counter" = $1, "updated_at" = $2 WHERE "url_managers"."id" = $3[0m  [["counter", 8], ["updated_at", "2022-07-30 23:45:26.493122"], ["id", 1]]
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+  [1m[36mTRANSACTION (74.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+Completed 302 Found in 456ms (Views: 0.2ms | ActiveRecord: 364.7ms | Allocations: 2996)
+
+
+Started GET "/3yEZwQ" for ::1 at 2022-07-30 18:46:24 -0500
+Processing by RedirectController#redirect as */*
+  Parameters: {"short_code"=>"3yEZwQ"}
+  [1m[36mUrlManager Load (71.9ms)[0m  [1m[34mSELECT "url_managers".* FROM "url_managers" WHERE "url_managers"."short_code" = $1 LIMIT $2[0m  [["short_code", "3yEZwQ"], ["LIMIT", 1]]
+  ↳ app/controllers/redirect_controller.rb:6:in `redirect'
+  [1m[36mTRANSACTION (75.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+  [1m[36mUrlManager Exists? (72.7ms)[0m  [1m[34mSELECT 1 AS one FROM "url_managers" WHERE "url_managers"."short_code" = $1 AND "url_managers"."id" != $2 LIMIT $3[0m  [["short_code", "3yEZwQ"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+  [1m[36mUrlManager Update (78.0ms)[0m  [1m[33mUPDATE "url_managers" SET "counter" = $1, "updated_at" = $2 WHERE "url_managers"."id" = $3[0m  [["counter", 9], ["updated_at", "2022-07-30 23:46:25.120231"], ["id", 1]]
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+  [1m[36mTRANSACTION (74.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+Completed 302 Found in 724ms (Views: 0.3ms | ActiveRecord: 608.3ms | Allocations: 6291)
+
+
+Started GET "/3yEZwQ" for 127.0.0.1 at 2022-07-30 18:59:15 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (69.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RedirectController#redirect as HTML
+  Parameters: {"short_code"=>"3yEZwQ"}
+  [1m[36mUrlManager Load (75.1ms)[0m  [1m[34mSELECT "url_managers".* FROM "url_managers" WHERE "url_managers"."short_code" = $1 LIMIT $2[0m  [["short_code", "3yEZwQ"], ["LIMIT", 1]]
+  ↳ app/controllers/redirect_controller.rb:6:in `redirect'
+  [1m[36mTRANSACTION (79.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+  [1m[36mUrlManager Exists? (72.2ms)[0m  [1m[34mSELECT 1 AS one FROM "url_managers" WHERE "url_managers"."short_code" = $1 AND "url_managers"."id" != $2 LIMIT $3[0m  [["short_code", "3yEZwQ"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+  [1m[36mUrlManager Update (98.6ms)[0m  [1m[33mUPDATE "url_managers" SET "counter" = $1, "updated_at" = $2 WHERE "url_managers"."id" = $3[0m  [["counter", 10], ["updated_at", "2022-07-30 23:59:18.333034"], ["id", 1]]
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+  [1m[36mTRANSACTION (72.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+Completed 302 Found in 899ms (Views: 0.3ms | ActiveRecord: 754.8ms | Allocations: 24219)
+
+
+Started GET "/3yEZwQ" for 127.0.0.1 at 2022-07-30 19:09:20 -0500
+Processing by RedirectController#redirect as HTML
+  Parameters: {"short_code"=>"3yEZwQ"}
+  [1m[36mUrlManager Load (77.0ms)[0m  [1m[34mSELECT "url_managers".* FROM "url_managers" WHERE "url_managers"."short_code" = $1 LIMIT $2[0m  [["short_code", "3yEZwQ"], ["LIMIT", 1]]
+  ↳ app/controllers/redirect_controller.rb:6:in `redirect'
+  [1m[36mTRANSACTION (69.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+  [1m[36mUrlManager Exists? (70.2ms)[0m  [1m[34mSELECT 1 AS one FROM "url_managers" WHERE "url_managers"."short_code" = $1 AND "url_managers"."id" != $2 LIMIT $3[0m  [["short_code", "3yEZwQ"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+  [1m[36mUrlManager Update (69.6ms)[0m  [1m[33mUPDATE "url_managers" SET "counter" = $1, "updated_at" = $2 WHERE "url_managers"."id" = $3[0m  [["counter", 11], ["updated_at", "2022-07-31 00:09:23.049602"], ["id", 1]]
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+  [1m[36mTRANSACTION (89.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+Completed 500 Internal Server Error in 2223ms (ActiveRecord: 1455.1ms | Allocations: 9072)
+
+
+  
+ArgumentError (wrong number of arguments (given 2, expected 0)):
+  
+app/controllers/redirect_controller.rb:5:in `redirect'
+app/controllers/redirect_controller.rb:12:in `redirect'
+Started GET "/3yEZwQ" for 127.0.0.1 at 2022-07-30 19:09:59 -0500
+Processing by RedirectController#redirect as HTML
+  Parameters: {"short_code"=>"3yEZwQ"}
+  [1m[36mUrlManager Load (71.9ms)[0m  [1m[34mSELECT "url_managers".* FROM "url_managers" WHERE "url_managers"."short_code" = $1 LIMIT $2[0m  [["short_code", "3yEZwQ"], ["LIMIT", 1]]
+  ↳ app/controllers/redirect_controller.rb:6:in `redirect'
+  [1m[36mTRANSACTION (84.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+  [1m[36mUrlManager Exists? (70.9ms)[0m  [1m[34mSELECT 1 AS one FROM "url_managers" WHERE "url_managers"."short_code" = $1 AND "url_managers"."id" != $2 LIMIT $3[0m  [["short_code", "3yEZwQ"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+  [1m[36mUrlManager Update (80.4ms)[0m  [1m[33mUPDATE "url_managers" SET "counter" = $1, "updated_at" = $2 WHERE "url_managers"."id" = $3[0m  [["counter", 12], ["updated_at", "2022-07-31 00:10:00.549637"], ["id", 1]]
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+  [1m[36mTRANSACTION (69.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+Completed 500 Internal Server Error in 848ms (ActiveRecord: 737.6ms | Allocations: 8056)
+
+
+  
+NameError (uninitialized constant RedirectController::Response):
+  
+app/controllers/redirect_controller.rb:12:in `redirect'
+Started GET "/3yEZwQ" for 127.0.0.1 at 2022-07-30 19:13:15 -0500
+Processing by RedirectController#redirect as HTML
+  Parameters: {"short_code"=>"3yEZwQ"}
+  [1m[36mUrlManager Load (83.5ms)[0m  [1m[34mSELECT "url_managers".* FROM "url_managers" WHERE "url_managers"."short_code" = $1 LIMIT $2[0m  [["short_code", "3yEZwQ"], ["LIMIT", 1]]
+  ↳ app/controllers/redirect_controller.rb:6:in `redirect'
+  [1m[36mTRANSACTION (72.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+  [1m[36mUrlManager Exists? (73.7ms)[0m  [1m[34mSELECT 1 AS one FROM "url_managers" WHERE "url_managers"."short_code" = $1 AND "url_managers"."id" != $2 LIMIT $3[0m  [["short_code", "3yEZwQ"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+  [1m[36mUrlManager Update (70.0ms)[0m  [1m[33mUPDATE "url_managers" SET "counter" = $1, "updated_at" = $2 WHERE "url_managers"."id" = $3[0m  [["counter", 13], ["updated_at", "2022-07-31 00:13:16.202908"], ["id", 1]]
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+  [1m[36mTRANSACTION (73.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+Completed 302 Found in 742ms (Views: 0.3ms | ActiveRecord: 602.8ms | Allocations: 6275)
+
+
+Started GET "/3yEZwQ" for ::1 at 2022-07-30 19:13:24 -0500
+Processing by RedirectController#redirect as */*
+  Parameters: {"short_code"=>"3yEZwQ"}
+  [1m[36mUrlManager Load (71.5ms)[0m  [1m[34mSELECT "url_managers".* FROM "url_managers" WHERE "url_managers"."short_code" = $1 LIMIT $2[0m  [["short_code", "3yEZwQ"], ["LIMIT", 1]]
+  ↳ app/controllers/redirect_controller.rb:6:in `redirect'
+  [1m[36mTRANSACTION (69.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+  [1m[36mUrlManager Exists? (78.6ms)[0m  [1m[34mSELECT 1 AS one FROM "url_managers" WHERE "url_managers"."short_code" = $1 AND "url_managers"."id" != $2 LIMIT $3[0m  [["short_code", "3yEZwQ"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+  [1m[36mUrlManager Update (71.1ms)[0m  [1m[33mUPDATE "url_managers" SET "counter" = $1, "updated_at" = $2 WHERE "url_managers"."id" = $3[0m  [["counter", 14], ["updated_at", "2022-07-31 00:13:24.968195"], ["id", 1]]
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+  [1m[36mTRANSACTION (74.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+Completed 302 Found in 699ms (Views: 0.3ms | ActiveRecord: 598.4ms | Allocations: 6268)
+
+
+Started GET "/3yEZwQ" for ::1 at 2022-07-30 19:13:57 -0500
+Processing by RedirectController#redirect as */*
+  Parameters: {"short_code"=>"3yEZwQ"}
+  [1m[36mUrlManager Load (70.3ms)[0m  [1m[34mSELECT "url_managers".* FROM "url_managers" WHERE "url_managers"."short_code" = $1 LIMIT $2[0m  [["short_code", "3yEZwQ"], ["LIMIT", 1]]
+  ↳ app/controllers/redirect_controller.rb:6:in `redirect'
+  [1m[36mTRANSACTION (129.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+  [1m[36mUrlManager Exists? (188.2ms)[0m  [1m[34mSELECT 1 AS one FROM "url_managers" WHERE "url_managers"."short_code" = $1 AND "url_managers"."id" != $2 LIMIT $3[0m  [["short_code", "3yEZwQ"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+  [1m[36mUrlManager Update (91.5ms)[0m  [1m[33mUPDATE "url_managers" SET "counter" = $1, "updated_at" = $2 WHERE "url_managers"."id" = $3[0m  [["counter", 15], ["updated_at", "2022-07-31 00:13:59.167601"], ["id", 1]]
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+  [1m[36mTRANSACTION (71.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+Completed 302 Found in 1242ms (Views: 0.2ms | ActiveRecord: 1127.7ms | Allocations: 6268)
+
+
+Started GET "/3yEZwQ" for 127.0.0.1 at 2022-07-30 19:15:57 -0500
+Processing by RedirectController#redirect as HTML
+  Parameters: {"short_code"=>"3yEZwQ"}
+  [1m[36mUrlManager Load (628.1ms)[0m  [1m[34mSELECT "url_managers".* FROM "url_managers" WHERE "url_managers"."short_code" = $1 LIMIT $2[0m  [["short_code", "3yEZwQ"], ["LIMIT", 1]]
+  ↳ app/controllers/redirect_controller.rb:6:in `redirect'
+  [1m[36mTRANSACTION (931.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+  [1m[36mUrlManager Exists? (69.4ms)[0m  [1m[34mSELECT 1 AS one FROM "url_managers" WHERE "url_managers"."short_code" = $1 AND "url_managers"."id" != $2 LIMIT $3[0m  [["short_code", "3yEZwQ"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+  [1m[36mUrlManager Update (68.6ms)[0m  [1m[33mUPDATE "url_managers" SET "counter" = $1, "updated_at" = $2 WHERE "url_managers"."id" = $3[0m  [["counter", 16], ["updated_at", "2022-07-31 00:15:59.479563"], ["id", 1]]
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+  [1m[36mTRANSACTION (2393.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+Completed 302 Found in 4630ms (Views: 0.3ms | ActiveRecord: 4474.0ms | Allocations: 6289)
+
+
+Started GET "/3yEZwQ" for ::1 at 2022-07-30 19:16:06 -0500
+Processing by RedirectController#redirect as */*
+  Parameters: {"short_code"=>"3yEZwQ"}
+  [1m[36mUrlManager Load (77.4ms)[0m  [1m[34mSELECT "url_managers".* FROM "url_managers" WHERE "url_managers"."short_code" = $1 LIMIT $2[0m  [["short_code", "3yEZwQ"], ["LIMIT", 1]]
+  ↳ app/controllers/redirect_controller.rb:6:in `redirect'
+  [1m[36mTRANSACTION (71.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+  [1m[36mUrlManager Exists? (74.9ms)[0m  [1m[34mSELECT 1 AS one FROM "url_managers" WHERE "url_managers"."short_code" = $1 AND "url_managers"."id" != $2 LIMIT $3[0m  [["short_code", "3yEZwQ"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+  [1m[36mUrlManager Update (73.4ms)[0m  [1m[33mUPDATE "url_managers" SET "counter" = $1, "updated_at" = $2 WHERE "url_managers"."id" = $3[0m  [["counter", 17], ["updated_at", "2022-07-31 00:16:06.479070"], ["id", 1]]
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+  [1m[36mTRANSACTION (73.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+Completed 302 Found in 461ms (Views: 0.2ms | ActiveRecord: 370.4ms | Allocations: 2973)
+
+
+Started GET "/3yEZwQ" for ::1 at 2022-07-30 19:17:37 -0500
+Processing by RedirectController#redirect as */*
+  Parameters: {"short_code"=>"3yEZwQ"}
+  [1m[36mUrlManager Load (71.2ms)[0m  [1m[34mSELECT "url_managers".* FROM "url_managers" WHERE "url_managers"."short_code" = $1 LIMIT $2[0m  [["short_code", "3yEZwQ"], ["LIMIT", 1]]
+  ↳ app/controllers/redirect_controller.rb:6:in `redirect'
+  [1m[36mTRANSACTION (78.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+  [1m[36mUrlManager Exists? (261.9ms)[0m  [1m[34mSELECT 1 AS one FROM "url_managers" WHERE "url_managers"."short_code" = $1 AND "url_managers"."id" != $2 LIMIT $3[0m  [["short_code", "3yEZwQ"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+  [1m[36mUrlManager Update (722.0ms)[0m  [1m[33mUPDATE "url_managers" SET "counter" = $1, "updated_at" = $2 WHERE "url_managers"."id" = $3[0m  [["counter", 18], ["updated_at", "2022-07-31 00:17:38.468087"], ["id", 1]]
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+  [1m[36mTRANSACTION (77.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+Completed 302 Found in 1583ms (Views: 0.3ms | ActiveRecord: 1427.2ms | Allocations: 6267)
+
+
+Started GET "/3yEZwQ" for ::1 at 2022-07-30 19:17:59 -0500
+Processing by RedirectController#redirect as */*
+  Parameters: {"short_code"=>"3yEZwQ"}
+  [1m[36mUrlManager Load (81.6ms)[0m  [1m[34mSELECT "url_managers".* FROM "url_managers" WHERE "url_managers"."short_code" = $1 LIMIT $2[0m  [["short_code", "3yEZwQ"], ["LIMIT", 1]]
+  ↳ app/controllers/redirect_controller.rb:6:in `redirect'
+  [1m[36mTRANSACTION (71.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+  [1m[36mUrlManager Exists? (73.3ms)[0m  [1m[34mSELECT 1 AS one FROM "url_managers" WHERE "url_managers"."short_code" = $1 AND "url_managers"."id" != $2 LIMIT $3[0m  [["short_code", "3yEZwQ"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+  [1m[36mUrlManager Update (80.7ms)[0m  [1m[33mUPDATE "url_managers" SET "counter" = $1, "updated_at" = $2 WHERE "url_managers"."id" = $3[0m  [["counter", 19], ["updated_at", "2022-07-31 00:18:00.018367"], ["id", 1]]
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+  [1m[36mTRANSACTION (75.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+Completed 302 Found in 706ms (Views: 0.3ms | ActiveRecord: 605.1ms | Allocations: 6264)
+
+
+Started GET "/3yEZwQ" for ::1 at 2022-07-30 19:18:46 -0500
+  
+SyntaxError (/home/edd/repos/url-shortener/app/controllers/redirect_controller.rb:11: syntax error, unexpected ':', expecting `end'
+      return status: 302, header: { location: url...
+                   ^
+):
+  
+app/controllers/redirect_controller.rb:11: syntax error, unexpected ':', expecting `end'
+app/controllers/redirect_controller.rb:11: syntax error, unexpected ':', expecting `end'
+Started GET "/3yEZwQ" for ::1 at 2022-07-30 19:19:22 -0500
+Processing by RedirectController#redirect as */*
+  Parameters: {"short_code"=>"3yEZwQ"}
+  [1m[36mUrlManager Load (73.6ms)[0m  [1m[34mSELECT "url_managers".* FROM "url_managers" WHERE "url_managers"."short_code" = $1 LIMIT $2[0m  [["short_code", "3yEZwQ"], ["LIMIT", 1]]
+  ↳ app/controllers/redirect_controller.rb:6:in `redirect'
+  [1m[36mTRANSACTION (73.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+  [1m[36mUrlManager Exists? (76.0ms)[0m  [1m[34mSELECT 1 AS one FROM "url_managers" WHERE "url_managers"."short_code" = $1 AND "url_managers"."id" != $2 LIMIT $3[0m  [["short_code", "3yEZwQ"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+  [1m[36mUrlManager Update (69.8ms)[0m  [1m[33mUPDATE "url_managers" SET "counter" = $1, "updated_at" = $2 WHERE "url_managers"."id" = $3[0m  [["counter", 20], ["updated_at", "2022-07-31 00:19:23.342853"], ["id", 1]]
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+  [1m[36mTRANSACTION (73.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+Completed 204 No Content in 701ms (ActiveRecord: 597.8ms | Allocations: 6214)
+
+
+Started GET "/3yEZwQ" for ::1 at 2022-07-30 19:19:32 -0500
+Processing by RedirectController#redirect as */*
+  Parameters: {"short_code"=>"3yEZwQ"}
+  [1m[36mUrlManager Load (68.7ms)[0m  [1m[34mSELECT "url_managers".* FROM "url_managers" WHERE "url_managers"."short_code" = $1 LIMIT $2[0m  [["short_code", "3yEZwQ"], ["LIMIT", 1]]
+  ↳ app/controllers/redirect_controller.rb:6:in `redirect'
+  [1m[36mTRANSACTION (68.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+  [1m[36mUrlManager Exists? (69.5ms)[0m  [1m[34mSELECT 1 AS one FROM "url_managers" WHERE "url_managers"."short_code" = $1 AND "url_managers"."id" != $2 LIMIT $3[0m  [["short_code", "3yEZwQ"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+  [1m[36mUrlManager Update (78.0ms)[0m  [1m[33mUPDATE "url_managers" SET "counter" = $1, "updated_at" = $2 WHERE "url_managers"."id" = $3[0m  [["counter", 21], ["updated_at", "2022-07-31 00:19:33.323530"], ["id", 1]]
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+  [1m[36mTRANSACTION (72.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+Completed 204 No Content in 705ms (ActiveRecord: 603.4ms | Allocations: 6256)
+
+
+Started GET "/3yEZwQ" for ::1 at 2022-07-30 19:23:48 -0500
+Processing by RedirectController#redirect as */*
+  Parameters: {"short_code"=>"3yEZwQ"}
+  [1m[36mUrlManager Load (71.9ms)[0m  [1m[34mSELECT "url_managers".* FROM "url_managers" WHERE "url_managers"."short_code" = $1 LIMIT $2[0m  [["short_code", "3yEZwQ"], ["LIMIT", 1]]
+  ↳ app/controllers/redirect_controller.rb:6:in `redirect'
+  [1m[36mTRANSACTION (84.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+  [1m[36mUrlManager Exists? (73.5ms)[0m  [1m[34mSELECT 1 AS one FROM "url_managers" WHERE "url_managers"."short_code" = $1 AND "url_managers"."id" != $2 LIMIT $3[0m  [["short_code", "3yEZwQ"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+  [1m[36mUrlManager Update (93.1ms)[0m  [1m[33mUPDATE "url_managers" SET "counter" = $1, "updated_at" = $2 WHERE "url_managers"."id" = $3[0m  [["counter", 22], ["updated_at", "2022-07-31 00:23:50.248502"], ["id", 1]]
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+  [1m[36mTRANSACTION (81.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+Completed 204 No Content in 811ms (ActiveRecord: 626.7ms | Allocations: 6368)
+
+
+Started GET "/3yEZwQ" for ::1 at 2022-07-30 19:24:04 -0500
+  
+SyntaxError (/home/edd/repos/url-shortener/app/controllers/redirect_controller.rb:11: syntax error, unexpected ':', expecting `end'
+      redirect_to: url.url
+                 ^
+):
+  
+app/controllers/redirect_controller.rb:11: syntax error, unexpected ':', expecting `end'
+app/controllers/redirect_controller.rb:11: syntax error, unexpected ':', expecting `end'
+Started GET "/3yEZwQ" for ::1 at 2022-07-30 19:24:16 -0500
+Processing by RedirectController#redirect as */*
+  Parameters: {"short_code"=>"3yEZwQ"}
+  [1m[36mUrlManager Load (70.8ms)[0m  [1m[34mSELECT "url_managers".* FROM "url_managers" WHERE "url_managers"."short_code" = $1 LIMIT $2[0m  [["short_code", "3yEZwQ"], ["LIMIT", 1]]
+  ↳ app/controllers/redirect_controller.rb:6:in `redirect'
+  [1m[36mTRANSACTION (70.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+  [1m[36mUrlManager Exists? (74.1ms)[0m  [1m[34mSELECT 1 AS one FROM "url_managers" WHERE "url_managers"."short_code" = $1 AND "url_managers"."id" != $2 LIMIT $3[0m  [["short_code", "3yEZwQ"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+  [1m[36mUrlManager Update (72.4ms)[0m  [1m[33mUPDATE "url_managers" SET "counter" = $1, "updated_at" = $2 WHERE "url_managers"."id" = $3[0m  [["counter", 23], ["updated_at", "2022-07-31 00:24:17.464802"], ["id", 1]]
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+  [1m[36mTRANSACTION (71.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+Redirected to 
+Completed 500 Internal Server Error in 692ms (ActiveRecord: 593.9ms | Allocations: 6373)
+
+
+  
+ActionController::Redirecting::UnsafeRedirectError (Unsafe redirect to "https://www.google.com", pass allow_other_host: true to redirect anyway.):
+  
+app/controllers/redirect_controller.rb:11:in `redirect'
+Started GET "/3yEZwQ" for ::1 at 2022-07-30 19:26:50 -0500
+Processing by RedirectController#redirect as */*
+  Parameters: {"short_code"=>"3yEZwQ"}
+  [1m[36mUrlManager Load (72.5ms)[0m  [1m[34mSELECT "url_managers".* FROM "url_managers" WHERE "url_managers"."short_code" = $1 LIMIT $2[0m  [["short_code", "3yEZwQ"], ["LIMIT", 1]]
+  ↳ app/controllers/redirect_controller.rb:6:in `redirect'
+  [1m[36mTRANSACTION (68.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+  [1m[36mUrlManager Exists? (69.3ms)[0m  [1m[34mSELECT 1 AS one FROM "url_managers" WHERE "url_managers"."short_code" = $1 AND "url_managers"."id" != $2 LIMIT $3[0m  [["short_code", "3yEZwQ"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+  [1m[36mUrlManager Update (70.3ms)[0m  [1m[33mUPDATE "url_managers" SET "counter" = $1, "updated_at" = $2 WHERE "url_managers"."id" = $3[0m  [["counter", 24], ["updated_at", "2022-07-31 00:26:51.088349"], ["id", 1]]
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+  [1m[36mTRANSACTION (80.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+Redirected to https://www.google.com
+Completed 302 Found in 715ms (ActiveRecord: 613.3ms | Allocations: 6257)
+
+
+Started GET "/3yEZwQ" for ::1 at 2022-07-30 19:27:09 -0500
+Processing by RedirectController#redirect as */*
+  Parameters: {"short_code"=>"3yEZwQ"}
+  [1m[36mUrlManager Load (70.0ms)[0m  [1m[34mSELECT "url_managers".* FROM "url_managers" WHERE "url_managers"."short_code" = $1 LIMIT $2[0m  [["short_code", "3yEZwQ"], ["LIMIT", 1]]
+  ↳ app/controllers/redirect_controller.rb:6:in `redirect'
+  [1m[36mTRANSACTION (73.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+  [1m[36mUrlManager Exists? (72.9ms)[0m  [1m[34mSELECT 1 AS one FROM "url_managers" WHERE "url_managers"."short_code" = $1 AND "url_managers"."id" != $2 LIMIT $3[0m  [["short_code", "3yEZwQ"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+  [1m[36mUrlManager Update (71.2ms)[0m  [1m[33mUPDATE "url_managers" SET "counter" = $1, "updated_at" = $2 WHERE "url_managers"."id" = $3[0m  [["counter", 25], ["updated_at", "2022-07-31 00:27:10.180923"], ["id", 1]]
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+  [1m[36mTRANSACTION (70.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/redirect_controller.rb:10:in `redirect'
+Redirected to https://www.google.com
+Completed 302 Found in 446ms (ActiveRecord: 357.7ms | Allocations: 2983)
+
+

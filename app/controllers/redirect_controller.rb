@@ -8,7 +8,7 @@ class RedirectController < ApplicationController
       render status: 400, json: { message: 'url no encontrada' } 
     else
       url.update(counter: url.counter += 1)
-      render status: 302, json: { url: url.url }
+      redirect_to url.url, allow_other_host: true
     end
   end
 end
