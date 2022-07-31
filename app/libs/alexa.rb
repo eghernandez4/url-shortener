@@ -3,7 +3,6 @@
 require 'rest-client'
 
 # manage request to Alexa API
-
 class Alexa
   def initialize(url)
     @url = url
@@ -21,6 +20,10 @@ class Alexa
   private
 
   def header
-    { "content_type": 'application/json', "accept": 'application/json', "x-api-key": '8T7SlYd7Tp16a9VPBovC26LXGhosXjeM97CLbUUv'}
+    { "content_type": 'application/json', "accept": 'application/json', "x-api-key": api_key }
+  end
+
+  def api_key
+    '8T7SlYd7Tp16a9VPBovC26LXGhosXjeM97CLbUUv'
   end
 end
